@@ -10,18 +10,21 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-light" id="header">
+    <div class="loader-layout">
+        <div class="loader"><span>Loading...</span></div>
+    </div>
+    <nav class="container py-4 navbar navbar-light" id="header">
         <div class="container">
-            <a class="navbar-brand" href="#">LaporHoax</a>
+            <a class="navbar-brand" href="#">PNP</a>
             <ul class="flex-row navbar-nav" style="justify-content: space-evenly">
-                <li class="nav-item">
-                    <a class="nav-link text-info" href="index.php">Home</a>
+                <li class="mr-5 nav-item">
+                    <a class="nav-link text-info" href="#">Home</a>
+                </li>
+                <li class="mr-5 nav-item">
+                    <a class="nav-link text-info" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-info" href="about.php">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-info" href="contact.php">Contact</a>
+                    <a class="nav-link text-info" href="#">Contact</a>
                 </li>
             </ul>
         </div>
@@ -32,23 +35,13 @@
 
             </div>
             <div class="col-md-6 col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Login</h5>
-                        <form action="login.php" method="post">
-                            <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" id="username" name="username" placeholder="Username">
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Login</button>
-                        </form>
-                    </div>
-                </div>
+                <img src="laporhoax.jpg" class="top-image">
             </div>
         </div>
     </div>
+    <script>
+        window.onload = function() {
+            document.querySelector('.loader-layout').style.display = 'none';
+        }
+    </script>
 </html>
